@@ -1,0 +1,20 @@
+Entities:
+
+Mini Redis (Key, Value)
+
+Concurrency and Race Conditions
+
+Models: 
+CacheEntry -> V value, expiryTime
+
+ExpiryNode -> K key, expiryTime
+
+Expiration:
+Performance: Scan the entire map everytime no: Delayed object in Java, run as and when the entry is available
+Thread -> run on background for the deletion
+
+StorageEngine -> deal with all the storagae related activites: ConcurrentHashMap<K, CacheEntry<V>> - concurrenty and race Conditions
+
+Orchestrator/ Mini Redis -> API wrapper functions
+
+
